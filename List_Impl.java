@@ -81,7 +81,6 @@ public class List_Impl {
         while (true){
             if(node == null) break;
             System.out.print(node.val + " ");
-
             node = node.next;
         }
     }
