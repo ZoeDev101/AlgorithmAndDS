@@ -44,7 +44,7 @@ public class BubbleSoreRecursion {
     public static void main(String args[]) {
         int nums[] = {8, 2, 6, 10, 4};
         bubbleSortRecursion(nums);
-        System.out.println("排序結果為");
+        System.out.println("排序結果");
         printArray(nums);
         System.out.println();
     }
