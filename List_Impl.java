@@ -128,6 +128,5 @@ public class List_Impl {
         list.remove(35); // remove end
         list.printList();
         System.out.println();
-
     }
 }
