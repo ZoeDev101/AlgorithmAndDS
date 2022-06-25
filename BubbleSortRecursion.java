@@ -1,4 +1,4 @@
-public class BubbleSoreRecursion {
+public class BubbleSortRecursion {
 
 
     public static void bubbleSortRecursion(int nums[]) {
