@@ -10,21 +10,23 @@ public class SelectionSortRecursion {
         if (start >= nums.length) {
             return;
         }
+
         int run = start + 1;
-        chgNums(nums, start,run);
-        mainLogic(nums,start+1);
+        int max = start;
+
+        max = getMaxNums(nums, max, run);
+        swap(nums, start, max);
+        mainLogic(nums, start + 1);
     }
 
-    public static void chgNums(int nums[],int start, int run) {
+    public static int getMaxNums(int nums[], int max, int run) {
         if (run >= nums.length) {
-            return;
+            return max;
         }
-        int max = start;
         if (nums[run] > nums[max]) {
             max = run;
         }
-        swap(nums, start, max);
-        chgNums(nums, start,run+1);
+        return getMaxNums(nums, max, run + 1);
     }
 
     private static void swap(int[] nums, int leftNum, int rightNum) {
@@ -40,8 +42,8 @@ public class SelectionSortRecursion {
     }
 
     public static void main(String args[]) {
-       int nums[] = {8, 2, 6, 10, 4};
-       //int nums[] = {99, 3, 10, 8, 120};
+        int nums[] = {8, 2, 6, 10, 4};
+        //int nums[] = {99, 3, 10, 8, 120};
         selectionSortRecursion(nums);
         System.out.println("排序結果");
         printArray(nums);
