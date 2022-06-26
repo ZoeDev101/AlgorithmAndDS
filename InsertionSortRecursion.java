@@ -1,13 +1,11 @@
 public class InsertionSortRecursion {
 
     public static void InsertionSortRecursion(int nums[]) {
-
         int start = 0;
         mainLogic(nums,start);
     }
 
     public static void mainLogic(int nums[],int start){
-
         int run = start - 1;
         if (start >= nums.length ){
             return;
@@ -17,7 +15,6 @@ public class InsertionSortRecursion {
     }
 
     public static void chgNums(int nums[],int run){
-
         if(run < 0 ){
             return;
         }
@@ -42,8 +39,7 @@ public class InsertionSortRecursion {
         }
     }
 
-    public static void main(String args[]) {
-
+    public static void main(String args[]){
         int[] nums = {8, 2, 6, 4, 10};
         InsertionSortRecursion(nums);
         System.out.println("排序後結果為：");
